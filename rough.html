@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroSpace — Flights</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="topbar">
+  <header class="header">
+    <div class="logo">
+      <img src="logo .webp" alt="STACKLY Logo" />
+      <h2>STACKLY</h2>
+    </div>
+    <button class="hamburger" id="hamburger">☰</button>
+  </header>
+
+  <nav class="navBar">
+    <ul class="linkRight">
+      <li class="dropdown">
+        <a href="./index.html">Home ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="./home 2.html">Home page 2</a></li>
+        </ul>
+      </li>
+      <li><a href="./booking.html">Booking</a></li>
+      <li><a href="./services.html">Services</a></li>
+      <li><a href="./safety.html">Safety</a></li>
+      <li><a href="./trips.html">Select Seat</a></li>
+      <li><a href="./dashboard.html">Dashboard</a></li>
+      <li><a href="./login.html">Log In</a></li>
+      <li class="sign"><button onclick="window.location.href='./cont.html'">Contact Us →</button></li>
+    </ul>
+  </nav>
+</div>
+
+<main id="aerospace-main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Fly High with AeroSpace</h1>
+      <p class="lead">Book flights, manage trips and explore top destinations with comfort & style.</p>
+
+      <!-- FIXED FORM -->
+      <form id="flight-search" class="search-box" onsubmit="event.preventDefault(); searchFlights();">
+        <input type="text" name="from" placeholder="From (city or airport)" required>
+        <input type="text" name="to" placeholder="To (city or airport)" required>
+        <input type="date" name="depart" required>
+        <button type="submit" class="btn">Search Flights</button>
+      </form>
+
+      <p id="statusMsg" class="status"></p>
+    </div>
+  </section>
+
+  <!-- POPULAR ROUTES -->
+  <section class="routes">
+    <div class="container">
+      <h2>Popular Routes</h2>
+      <div class="route-grid">
+        <article class="route-card">
+          <img src="img1.webp" alt="">
+          <p>Chennai → Delhi</p>
+        </article>
+        <article class="route-card">
+          <img src="img2.webp" alt="">
+          <p>Mumbai → Bengaluru</p>
+        </article>
+        <article class="route-card">
+          <img src="img3 (1).webp" alt="">
+          <p>Delhi → Hyderabad</p>
+        </article>
+        <article class="route-card">
+          <img src="img4.webp" alt="">
+          <p>Pune → Kolkata</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFERS -->
+  <section class="offers">
+    <div class="container">
+      <h2>Today's Deals</h2>
+      <div class="offer-grid">
+        <div class="offer-card">
+          <img src="img5 (4).webp" alt="">
+          <h3>Summer Sale</h3>
+          <p>Up to 40% OFF on domestic flights.</p>
+        </div>
+
+        <div class="offer-card">
+          <img src="img6.webp" alt="">
+          <h3>Student Discount</h3>
+          <p>Extra 10kg baggage + ₹500 off.</p>
+        </div>
+
+        <div class="offer-card">
+          <img src="img7.webp" alt="">
+          <h3>Family Saver</h3>
+          <p>Save on group bookings — family packages available.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container">
+      <h2>Subscribe for Offers</h2>
+      <p>Get exclusive flight deals in your inbox.</p>
+
+      <!-- FIXED FORM -->
+      <form id="newsletter-form" class="newsletter-form" onsubmit="event.preventDefault(); subscribeNewsletter();">
+        <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+
+      <p id="newsletter-msg" class="status"></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <h3>Popular Flights</h3>
+      <a href="#">Chennai → Delhi</a>
+      <a href="#">Mumbai → Bengaluru</a>
+      <a href="#">Delhi → Hyderabad</a>
+      <a href="#">Kolkata → Pune</a>
+      <a href="#">Chennai → Dubai</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Top Destinations</h3>
+      <a href="#">Singapore</a>
+      <a href="#">Dubai</a>
+      <a href="#">Malaysia</a>
+      <a href="#">Qatar</a>
+      <a href="#">Bangkok</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Information</h3>
+      <a href="#">Flight Status</a>
+      <a href="#">Manage Booking</a>
+      <a href="#">Check-in</a>
+      <a href="#">Cancellations</a>
+      <a href="#">Baggage Allowance</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Support</h3>
+      <a href="#">Help Center</a>
+      <a href="#">Customer Care</a>
+      <a href="#">Contact Us</a>
+      <a href="#">Refund Rules</a>
+      <a href="#">Terms & Conditions</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Get Our App</h3>
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="app-badge" />
+
+      <h3 style="margin-top:25px;">Follow Us</h3>
+      <div class="social-icons">
+        <a href="#" class="icon fb"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="icon ig"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="icon tw"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="icon li"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="icon yt"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 AeroSpace Airlines Pvt Ltd. | Safe • Fast • Affordable</p>
+  </div>
+</footer>
+<script>
+/* ---------------------------
+   FIXED SEARCH FLIGHT SCRIPT
+----------------------------*/
+function searchFlights() {
+    let status = document.getElementById("statusMsg");
+
+    let from = document.querySelector("input[name='from']").value.trim();
+    let to = document.querySelector("input[name='to']").value.trim();
+    let depart = document.querySelector("input[name='depart']").value.trim();
+
+    if (from === "" || to === "" || depart === "") {
+        status.style.color = "red";
+        status.textContent = "❗ Please fill all required fields.";
+        return;
+    }
+
+    status.style.color = "orange";
+    status.textContent = "🔍 Searching flights...";
+
+    setTimeout(() => {
+        status.style.color = "green";
+        status.textContent = "🚀 Space flights found! Proceed to booking.";
+    }, 2000);
+}
+
+/* ---------------------------
+   FIXED NEWSLETTER SCRIPT
+----------------------------*/
+function subscribeNewsletter() {
+    let email = document.getElementById("newsletter-email").value.trim();
+    let msg = document.getElementById("newsletter-msg");
+
+    if (email === "") {
+        msg.style.color = "red";
+        msg.textContent = "❗ Please enter your email.";
+        return;
+    }
+
+    msg.style.color = "orange";
+    msg.textContent = "⏳ Subscribing...";
+
+    setTimeout(() => {
+        msg.style.color = "green";
+        msg.textContent = "🎉 Subscription successful!";
+    }, 2000);
+}
+</script>
+<script src="in.js"></script>
+</body>
+</html>
